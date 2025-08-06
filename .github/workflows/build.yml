@@ -19,6 +19,7 @@ env:
   IMAGE_LOGO_URL: "https://avatars.githubusercontent.com/u/120078124?s=200&v=4"  # Todo: create icon
   IMAGE_NAME: "${{ github.event.repository.name }}"  # output image name, usually same as repo name
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"  # do not edit
+  IMAGE_VENDOR: "${{ github.repository_owner }}"
   DEFAULT_TAG: "latest"
 
 concurrency:
