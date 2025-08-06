@@ -1,4 +1,5 @@
 export image_name := env("IMAGE_NAME", "succub-os")
+export image_vendor := env("IMAGE_VENDOR", "kenziemac130")
 export default_tag := env("DEFAULT_TAG", "latest")
 export bib_image := env("BIB_IMAGE", "quay.io/centos-bootc/bootc-image-builder:latest")
 

@@ -11,6 +11,13 @@ COPY /build_files /build_files
 # Base Image
 FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS base
 
+# Configure (see justfile too)
+ARG IMAGE_NAME="succub-os"
+ARG IMAGE_VENDOR="kenziemac130"
+ARG SHA_HEAD_SHORT="0248acdf"
+ARG VERSION=""
+
+# Build
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
