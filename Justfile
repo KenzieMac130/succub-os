@@ -1,6 +1,9 @@
+# todo: look at moving to build args? (see aurora)
 export image_name := env("IMAGE_NAME", "succub-os")
 export image_vendor := env("IMAGE_VENDOR", "kenziemac130")
+export base_image_name := env("BASE_IMAGE_NAME", "kinoite")
 export default_tag := env("DEFAULT_TAG", "latest")
+export version := env("VERSION", "")
 export bib_image := env("BIB_IMAGE", "quay.io/centos-bootc/bootc-image-builder:latest")
 
 alias build-vm := build-qcow2
