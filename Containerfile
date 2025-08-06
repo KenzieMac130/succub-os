@@ -12,6 +12,8 @@ COPY /build_files /build_files
 FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS base
 
 # Configure (see justfile too)
+ARG BASE_IMAGE_NAME="kinoite"
+ARG FEDORA_MAJOR_VERSION="41"
 ARG IMAGE_NAME="succub-os"
 ARG IMAGE_VENDOR="kenziemac130"
 ARG SHA_HEAD_SHORT="0248acdf"
