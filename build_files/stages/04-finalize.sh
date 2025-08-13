@@ -4,7 +4,12 @@ echo "::group:: ===$(basename "$0")==="
 
 set -ouex pipefail
 
-# Hide LSP icons if visible
+# Setup systemd
+systemctl enable input-remapper
+systemctl enable earlyoom
+
+# Hide unnecesary LSP icons if visible
+# todo: just remove them? (this hasn't been an issue yet)
 # see: https://www.reddit.com/r/linux4noobs/comments/g40e3a/unwanted_lsp_plugins_showing_up/
 find /usr/share/applications -name "*lsp_plug*desktop" 2>/dev/null | while read -r file; do
     dest="$HOME/.local/share/applications/$(basename "$file")"
@@ -14,6 +19,5 @@ find /usr/share/applications -name "*lsp_plug*desktop" 2>/dev/null | while read 
     echo "NoDisplay=true" >> "$dest"
 done
 
-# Setup systemd
-systemctl enable input-remapper
-systemctl enable earlyoom
+# Remove unnecesary Calf Plugin icons
+rm /usr/share/applications/calf.desktop || true
