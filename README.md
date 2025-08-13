@@ -18,10 +18,6 @@ These are great operating systems but are too opinionated for my liking. I prefe
 
 ## Included Features
 
-### KDE Focused
-
-Built on KDE Plasma and embracing KDE's application ecosystem for a more unified, familiar, and intuitive user experience.
-
 ### Better Out of Memory Handling
 
 On most Linux environments processes can end up using all the system's availible memory and swap and still take priority over the desktop environment. This causes an unresponsive system requiring the process to be manually killed if possible or a system reboot. On a desktop environment this is simply awful behavior. [Earlyoom](https://github.com/rfjakob/earlyoom) comes integrated with the OS to kill problematic processes before they get the chance to lock up your system for an unknown length of time potenially causing you to lose unsaved progress in the rest of your session.
