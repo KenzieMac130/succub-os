@@ -7,6 +7,7 @@ ARG BASE_IMAGE="ghcr.io/ublue-os/${SOURCE_IMAGE}"
 # Setup Context
 FROM scratch AS ctx
 COPY /build_files /build_files
+COPY /just /just
 
 # Base Image
 FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS base
