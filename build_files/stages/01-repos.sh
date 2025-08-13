@@ -10,4 +10,4 @@ systemctl disable flatpak-add-fedora-repos.service
 
 # VSCodium
 rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
-# yum repo already in etc...
+dnf5 -y config-manager addrepo --from-repofile=/etc/yum.repos.d/vscodium.repo
