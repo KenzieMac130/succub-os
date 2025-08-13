@@ -2,6 +2,9 @@
 
 set -ouex pipefail
 
+# Copy System Files
+rsync -rvK /ctx/system_files/ /
+
 # Create image-info.json
 /ctx/build_files/stages/00-image-info.sh
 

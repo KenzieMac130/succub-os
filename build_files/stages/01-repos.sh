@@ -4,6 +4,8 @@ echo "::group:: ===$(basename "$0")==="
 
 set -ouex pipefail
 
-# Setup Flathub and remove Fedora Flatpaks
-flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# Setup Flathub and disable Fedora Flatpaks
 systemctl disable flatpak-add-fedora-repos.service
+flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-delete --force fedora
+flatpak remote-delete --force fedora-testing
