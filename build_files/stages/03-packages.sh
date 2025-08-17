@@ -4,6 +4,9 @@ echo "::group:: ===$(basename "$0")==="
 
 set -ouex pipefail
 
+# needed for steam
+dnf5 config-manager setopt fedora-cisco-openh264.enabled=1
+
 remove_packages=(
     kate
 )
@@ -13,10 +16,9 @@ add_packages=(
     "input-remapper"
     "helvum"
     "easyeffects"
-    "vlc"
-    "speedcrunch"
-    "gwenview"
     "codium"
+    "lutris"
+    "steam"
 )
 
 for remove_package in "${remove_packages[@]}"

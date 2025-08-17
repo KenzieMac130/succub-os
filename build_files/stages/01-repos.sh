@@ -10,3 +10,9 @@ systemctl disable flatpak-add-fedora-repos.service
 
 # VSCodium
 rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
+
+# RPM Fusion (non-free packages)
+dnf5 install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+
+# RClone
+curl https://rclone.org/install.sh | bash -s beta
