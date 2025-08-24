@@ -24,3 +24,6 @@ rm /usr/share/applications/calf.desktop || true
 
 # Create Symlink from VSCode to Codium
 ln -s /bin/codium /bin/code
+
+# Setup services
+systemctl enable succub-os-flatpaks.service
