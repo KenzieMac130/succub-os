@@ -15,4 +15,6 @@ rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/mast
 dnf5 install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
 # RClone
+set +ouex pipefail # needs pipefail off
 curl https://rclone.org/install.sh | bash -s beta
+set -ouex pipefail
