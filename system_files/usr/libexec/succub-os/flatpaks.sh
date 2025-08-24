@@ -8,7 +8,7 @@ flatpak remote-delete --user --force fedora
 flatpak remote-delete --system --force fedora-testing
 flatpak remote-delete --user --force fedora-testing
 
-add_package=(
+add_packages=(
     "org.videolan.VLC"
     "org.speedcrunch.SpeedCrunch"
     "org.kde.gwenview"
