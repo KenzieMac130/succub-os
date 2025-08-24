@@ -8,7 +8,7 @@ set -ouex pipefail
 dnf5 config-manager setopt fedora-cisco-openh264.enabled=1
 
 remove_packages=(
-    kate
+    "kate"
 )
 
 add_packages=(
