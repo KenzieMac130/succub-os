@@ -4,14 +4,13 @@ echo "::group:: ===$(basename "$0")==="
 
 set -ouex pipefail
 
-# needed for steam
-dnf5 config-manager setopt fedora-cisco-openh264.enabled=1
-
 remove_packages=(
     "kate"
 )
 
 add_packages=(
+    "kopia"
+    "kopia-ui"
     "earlyoom"
     "input-remapper"
     "helvum"
@@ -19,6 +18,7 @@ add_packages=(
     "codium"
     "lutris"
     "steam"
+    "mangohud"
 )
 
 for remove_package in "${remove_packages[@]}"
