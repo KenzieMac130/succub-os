@@ -10,7 +10,6 @@ remove_packages=(
 
 add_packages=(
     "kopia"
-    "kopia-ui"
     "earlyoom"
     "input-remapper"
     "helvum"
