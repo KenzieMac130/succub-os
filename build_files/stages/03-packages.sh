@@ -9,6 +9,9 @@ remove_packages=(
 )
 
 add_packages=(
+    "tldr"
+    "unrar"
+    "unrar-free"
     "kopia"
     "earlyoom"
     "input-remapper"
@@ -18,6 +21,7 @@ add_packages=(
     "lutris"
     "steam"
     "mangohud"
+    "obs-studio-plugin-vkcapture"
 )
 
 for remove_package in "${remove_packages[@]}"

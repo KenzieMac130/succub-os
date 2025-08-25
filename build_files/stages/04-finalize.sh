@@ -22,5 +22,9 @@ done
 # Remove unnecesary Calf Plugin icons
 rm /usr/share/applications/calf.desktop || true
 
+# Remove temporary repos
+rm /etc/yum.repos.d/kopia.repo
+rm /etc/yum.repos.d/vscodium.repo
+
 # Setup services
 systemctl enable succub-os-flatpaks.service
