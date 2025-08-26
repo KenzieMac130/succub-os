@@ -168,7 +168,7 @@ _build-bib $target_image $tag $type $config: (_rootful_load_image target_image t
 
     args="--type ${type} "
     args+="--use-librepo=True "
-    args+="--rootfs=ext4"
+    args+="--rootfs=btrfs"
 
     BUILDTMP=$(mktemp -p "${PWD}" -d -t _build-bib.XXXXXXXXXX)
 
