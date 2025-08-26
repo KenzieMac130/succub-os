@@ -28,7 +28,7 @@ rm /etc/yum.repos.d/vscodium.repo
 
 # Get rid of Fedora Firefox branding
 rm -f /usr/lib64/firefox/browser/defaults/preferences/firefox-redhat-default-prefs.js 
-dnf5 remove fedora-bookmarks
+dnf5 -y remove fedora-bookmarks
 
 # Setup services
 systemctl enable succub-os-flatpaks.service
