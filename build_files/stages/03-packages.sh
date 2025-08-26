@@ -15,12 +15,13 @@ add_packages=(
     "kopia"
     "earlyoom"
     "input-remapper"
-    "helvum"
+    "qpwgraph"
     "easyeffects"
     "codium"
     "lutris"
     "steam"
     "mangohud"
+    "obs-studio"
     "obs-studio-plugin-vkcapture"
 )
 

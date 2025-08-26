@@ -26,5 +26,9 @@ rm /usr/share/applications/calf.desktop || true
 rm /etc/yum.repos.d/kopia.repo
 rm /etc/yum.repos.d/vscodium.repo
 
+# Get rid of Fedora Firefox branding
+rm -f /usr/lib64/firefox/browser/defaults/preferences/firefox-redhat-default-prefs.js 
+dnf5 remove fedora-bookmarks
+
 # Setup services
 systemctl enable succub-os-flatpaks.service
